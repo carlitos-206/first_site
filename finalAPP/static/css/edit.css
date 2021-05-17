@@ -1,0 +1,76 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+.wrapper{
+    background-image: linear-gradient(to bottom right, green,white );
+    height: 600px;
+}
+    #main_title{
+        color: darkgreen;
+        position: relative;
+        left:480px;
+        position: absolute;
+    }
+.edit_error{
+    color: black;
+    width: fit-content;
+    position: relative;
+    top: 480px;
+    left:900px;
+
+}
+.update_trip_form{
+    height: 500px;
+    width: 400px;
+    outline: solid black;
+    position: relative;
+    top: 60px;
+    left: 450px;
+    position: absolute;
+    font-size: 24px;
+    background-image: linear-gradient(to bottom left, green, purple, green);
+    color: greenyellow;
+}
+.field1{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    position: absolute;
+}
+.field2{
+    position: relative;
+    top: 70px;
+    left: 5px;
+    position: absolute;
+}
+.field3{
+    position: relative;
+    left: 5px;
+    top: 130px;
+}
+.field4{
+    position: relative;
+    left:5px;
+    top: 200px;
+    position: absolute;
+}
+.field5{
+    background-image: linear-gradient(to bottom right yellow,red);
+    position: relative;
+    top:400px;
+    left: 300px;
+}
+button {
+    background-color:blue; 
+    height: 25px;
+    width: 80px;
+}
+a {
+    position: relative;
+    top: 500px;  
+    left: 500px;
+    color: blanchedalmond;
+    position: absolute;
+}

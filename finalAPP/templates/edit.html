@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/edit.css' %}">
+    <title>Update Trip</title>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <h1 id="main_title">Edit Trip</h1>
+        <div class="edit_error">
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li {% if message.tags %} class="{{message.tags}}" {%endif%}>{{message}}</li>
+                {%endfor%}
+            </ul>
+            {%endif%}
+        </div>
+        <div class="update_trip_form">
+            <form action="/{{this_trip.id}}/update" method="POST">
+            {% csrf_token %}
+                <div class="field1">
+                    <label for="trip">Whats the new Location?</label>
+                    <input type="text" name='trip' value={{this_trip.name}}>
+                </div>
+                <div class="field2">
+                    <label for="start_date">New Start Date?</label>
+                    <input type="date" name='start_date' value={{this_trip.start_date}}>
+                </div>
+                <div class="field3">
+                    <label for="end_date">New End Date?</label>
+                    <input type="date" name='end_date' value='{{this_trip.end_date}}'>
+                </div>
+                <div class="field4">
+                    <label for="plan">New plan?</label>
+                    <textarea name='plan' id="" cols="50" rows="10" value={{this_trip.plan}}>{{this_trip.plan}}</textarea>
+                </div>
+                <div class="field5">
+                    <button type="submit" id="btn">Update!</button>
+                </div>
+            </form>
+        </div>
+        <a href="/dashboard">Cancel</a>
+    </div>
+</div>
+</body>
+</html>

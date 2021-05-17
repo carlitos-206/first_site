@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+#main_title{
+    position: relative;
+    top: 10px;
+    left:350px;
+    position: absolute;
+}
+
+.log_a_tags{
+    width: fit-content;
+    position: relative;
+    left:1000px;
+    top:25px;
+}
+    #trip_btn{
+        position: relative;
+        top: 170px;
+        left:148px;
+        position: absolute;
+    }
+.trip_table{
+    position: relative;
+    width: 1000px;
+    top:200px;
+    left: 150px;
+    outline: solid orange;
+    position: absolute;
+}
+    #thead{
+        font-size: large;
+    }
+    #thRow{
+        background-color: aqua;
+    }
+    #tData{
+        background-color: rgb(49, 16, 16);
+        color: green;
+    }

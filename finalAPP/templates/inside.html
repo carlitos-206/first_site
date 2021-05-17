@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/inside.css' %}">
+    <title>{{user.first_name}}'s Dashboard</title>
+</head>
+<body>
+    <div class="wrapper">
+    <h1 id="main_title">&#127797; Welcome back, {{user.first_name}} &#127797; </h1>
+    <div class="log_a_tags">
+        <a href="/addTripForm">Lets Plan a Trip</a>|<a href="/logout">Log Out</a>
+
+    </div>
+    <form action="/addTripForm" method="POST" id="trip_btn">
+        {%csrf_token%}
+        <input type="hidden">
+        <button type="submit">Lets take a Trip</button>
+    </form>
+    <table class="trip_table">
+        <th id="thead">
+            <h2>Upcoming Trips</h2>
+        </th>
+        <tr id="thRow">
+            <td>Where?</td>
+            <td>Start Date</td>
+            <td>End Date</td>
+            <td>Plan</td>
+            <td>Actions</td>
+        </tr>
+        {% for trip in all_trips %}
+        <tr id="tData">
+            <td><a href="/{{trip.id}}">{{trip.name}}</a></td>
+            <td>{{trip.start_date}}</td>
+            <td>{{trip.end_date}}</td>
+            <td>{{trip.plan}}</td>
+
+            <td><a href="delete/{{trip.id}}">Remove</a>|<a href="/{{trip.id}}/edit">Edit</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+    </form>
+</div>
+</body>
+</html>

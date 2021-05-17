@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/tripform.css' %}">
+    <title>Lets take a trip!</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 id="main_title">Lets take a trip {{user.first_name}} &#9996; </h1>
+        <div class="trip_error">
+            {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li {% if message.tags%} class={{message.tags}} {%endif%}>{{message}}</li>
+            {% endfor %}
+        </ul>
+        {%endif%}
+        </div>
+        <div class="add_trip_form">
+            <form action="/addTrip" method="POST">
+                {%csrf_token%}
+                <div class="field1">
+                    <label for="trip">Where to?</label>
+                    <input type="text" name='trip'>
+                </div>
+                <div class="field2">
+                    <label for="start_date">From when?</label>
+                    <input type="date" name='start_date'>
+                </div>
+                <div class="field3">
+                    <label for="end_date">To when?</label>
+                    <input type="date" name='end_date'>
+                </div>
+                <div class="field4">
+                    <label for="plan">What's the plan?</label>
+                    <textarea name='plan' id="" cols="50" rows="10"></textarea>
+                </div>
+                <div class="field5">
+                    <button type="submit" id="btn">LETS GO!</button>
+                </div>
+            </form>
+        </div>
+            <a href="/dashboard">Cancel</a>
+    </div>
+</body>
+</html>

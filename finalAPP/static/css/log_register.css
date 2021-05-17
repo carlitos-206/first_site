@@ -1,0 +1,114 @@
+*{
+    padding:0px;
+    margin:0px;
+    /* outline: 2px dotted green; */
+}  
+.alerts{
+    position: relative;
+    left:500px;
+    top: 400px;
+    position: absolute;
+}
+.register_form{
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 440px;
+    height: 500px;
+    outline: solid black;
+    position: sticky;
+    background-color: gray;
+}
+    #main_title{
+        font-size: 52px;
+        position: relative;
+        left:250px;
+    }
+    #register_alerts{
+        color:red;
+    }
+    #register_title{
+        font-size: 54px;
+        position: relative;
+        left: 50px
+    }
+    #register_btn{
+        font-size: 24px;
+        border-radius: 10px;
+        background-color: black;
+        color: blueviolet;
+        width: 150px;  
+        height: 65px;
+        position: relative;
+        left: 200px;
+    }
+.register_fields{
+    background-color: gray;
+    color:black;
+    padding:20px;
+    font-size: 18px;
+}
+    #register_input_1, #register_input_2, 
+    #register_input_3,#register_input_4,
+    #register_input_5{
+        width: 250px;
+    background-color: aqua;
+}
+    #register_input_1{
+        position: relative;
+        top:5px;
+        left: 250px;
+        position: sticky;
+    }
+    #register_input_2{
+        position: relative;
+        left:250px;
+        position:sticky;
+    }
+    #register_input_3{
+        position: relative;
+        left:250px;    
+        position: sticky;
+    }
+    #register_input_4{
+        position: relative;
+        left:250px;
+        position: sticky;
+    }
+.login{
+    position: relative;
+    left: 600px;
+    bottom: 500px;
+    outline: solid black;
+    width: 500px;
+    height: 250px;
+}
+.login_email{
+    padding: 10px;
+    font-size: 24px;
+}
+.login_password{
+    padding: 10px;
+    font-size: 24px;
+}
+    #longing_input_2, #longing_input_1{
+        width: 350px;
+    }
+    #longing_input_1{
+        position: relative;
+        left: 43px;
+    }
+    #login_title{
+        position: relative;
+        left:32px;
+    }
+    #login_btn{
+        font-size: 24px;
+        border-radius: 10px;
+        background-color: rgb(152, 14, 243);
+        color: rgb(46, 43, 226);
+        width: 150px;  
+        height: 65px;
+        position: relative;
+        left: 200px;
+
+    }
